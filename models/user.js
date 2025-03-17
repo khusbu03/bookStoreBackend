@@ -5,7 +5,7 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true,
     },
-    emalId:{
+    emailId:{
         type:String,
         required:true,
     },
@@ -22,10 +22,10 @@ const userSchema=new mongoose.Schema({
         type:String,
     },
     refreshToken:{
-
+        type:String,
     },
     otp:{
-        type:Number
+        type:String
     },
     booksPurchased:[{
         type:mongoose.Schema.Types.ObjectId,

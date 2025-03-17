@@ -3,6 +3,7 @@ const app=express();
 const cookieParser=require("cookie-parser")
 
 require("dotenv").config();
+const PORT=process.env.PORT||3000;
 
 const dbConnect=require("./config/database");
 const bookStoreRoutes=require("./routes/index")
@@ -10,7 +11,7 @@ const bookStoreRoutes=require("./routes/index")
 dbConnect().then(()=>{
     console.log("DB Connected");
 
-    app.listen(process.env.PORT,()=>{
+    app.listen(PORT,()=>{
         console.log(`Server is live and running at ${PORT} port`);
     })
 })
