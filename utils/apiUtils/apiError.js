@@ -1,10 +1,10 @@
-class apiError extends Error{
+class ApiError extends Error{
 
-    constructor(statusCode,message,error){
-        super(error);
-        this.message=message,
-        this.statusCode=statusCode
-
+    constructor(statusCode,message){
+        super(message);
+        this.statusCode=statusCode;
+        this.success=false;
     }
-
 }
+
+module.exports=ApiError;
